@@ -5,10 +5,10 @@ class DockerMachineCompletion < Formula
   sha256 "0b76cace0f71043c768e6ebc84ad424c62e70f2557c70389d7440ca71b1e3482"
   head "https://github.com/Ketouem/docker-machine-completions.git"
 
+  bottle :unneeded
+
   conflicts_with "docker-machine",
     :because => "docker-machine already includes completion scripts"
-
-  bottle :unneeded
 
   def install
     bash_completion.install "docker-machine_completions.sh" => "docker-machine"
