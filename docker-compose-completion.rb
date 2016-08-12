@@ -5,10 +5,10 @@ class DockerComposeCompletion < Formula
   sha256 "a93d702086fdc95f79d20462ddaf7cd174e3d8053b79fe3c565f0ace76a16750"
   head "https://github.com/docker/compose.git"
 
+  bottle :unneeded
+
   conflicts_with "docker-compose",
     :because => "docker-compose already includes completion scripts"
-
-  bottle :unneeded
 
   def install
     bash_completion.install "contrib/completion/bash/docker-compose"
